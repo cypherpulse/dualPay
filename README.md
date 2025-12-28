@@ -9,6 +9,8 @@
 
 A decentralized marketplace on the Stacks blockchain enabling secure peer-to-peer trading with multi-currency support (STX & SBTC) through Clarity smart contracts.
 
+![DualPay Market](./assets/dualPay.png)
+
 ## Table of Contents
 
 - [DualPay Market](#dualpay-market)
@@ -181,6 +183,16 @@ graph LR
     style H fill:#f3e5f5
     style N fill:#e8f5e8
 ```
+
+## Wallet Integration
+
+The application uses Stacks Connect and WalletConnect for secure wallet connections and transaction signing. Key packages include:
+
+- `@stacks/connect`: ^8.2.4 - Wallet connection and transaction handling
+- `@stacks/network`: ^7.3.1 - Network configuration for Stacks blockchain
+- `@stacks/transactions`: ^7.3.1 - Transaction building and signing
+
+This enables seamless integration with popular Stacks wallets like Hiro Wallet and Xverse.
 
 ## Prerequisites
 
