@@ -86,10 +86,10 @@ export function BuyModal({ item, isOpen, onClose, onSuccess }: BuyModalProps) {
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-6 py-4">
+        <div className="space-y-4 md:space-y-6 py-4">
           {/* Quantity Input */}
           <div className="space-y-2">
-            <Label htmlFor="quantity">Quantity (max: {maxQuantity})</Label>
+            <Label htmlFor="quantity" className="text-sm md:text-base">Quantity (max: {maxQuantity})</Label>
             <Input
               id="quantity"
               type="number"
@@ -97,17 +97,17 @@ export function BuyModal({ item, isOpen, onClose, onSuccess }: BuyModalProps) {
               max={maxQuantity}
               value={quantity}
               onChange={(e) => setQuantity(Math.min(maxQuantity, Math.max(1, parseInt(e.target.value) || 1)))}
-              className="bg-secondary border-border"
+              className="bg-secondary border-border h-12 text-base"
             />
           </div>
 
           {/* Payment Toggle */}
-          <div className="flex items-center justify-between p-4 rounded-lg bg-secondary/50 border border-border">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg bg-secondary/50 border border-border gap-3">
             <div className="space-y-1">
-              <Label htmlFor="sbtc-toggle" className="font-medium">
+              <Label htmlFor="sbtc-toggle" className="font-medium text-sm md:text-base">
                 Pay with sBTC <BitcoinSymbol className="text-primary" />
               </Label>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground">
                 {payWithSbtc ? 'Using sBTC (Bitcoin L2)' : 'Using STX (Stacks)'}
               </p>
             </div>
