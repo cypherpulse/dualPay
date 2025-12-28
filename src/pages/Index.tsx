@@ -20,14 +20,14 @@ const Index = () => {
       
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
 
-      <main className="container mx-auto px-4 py-8 relative">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 relative">
         {/* Hero Section - only on marketplace */}
         {activeTab === 'marketplace' && (
           <div className="text-center mb-12 animate-slide-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               <span className="glow-text">DualPay Market</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               The Bitcoin L2 marketplace where you pay with{' '}
               <span className="text-foreground font-semibold">STX</span> or{' '}
               <span className="text-primary font-semibold">
@@ -54,8 +54,8 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 mt-16 py-8">
-        <div className="container mx-auto px-4 text-center">
+      <footer className="border-t border-border/50 mt-12 md:mt-16 py-6 md:py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs text-muted-foreground">
             Running on Stacks Testnet • Contract: STGDS0Y17973EN5TCHNHGJJ9B31XWQ5YXBQ0KQ2Y.dual-pay-market
           </p>
