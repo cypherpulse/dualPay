@@ -83,6 +83,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
     try {
       const response = await connect({
         walletConnectProjectId: WALLET_CONNECT_PROJECT_ID,
+        network: 'testnet',
       });
       
       if (response && response.addresses) {
