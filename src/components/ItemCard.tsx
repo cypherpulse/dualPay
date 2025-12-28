@@ -32,9 +32,9 @@ export function ItemCard({ item, onBuy }: ItemCardProps) {
       {/* Gradient top bar */}
       <div className="h-1 bg-gradient-bitcoin" />
       
-      <CardHeader className="pb-3">
+      <CardHeader className="pb-2 md:pb-3">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="text-lg font-bold text-foreground line-clamp-1 group-hover:text-primary transition-colors">
+          <h3 className="text-base md:text-lg font-bold text-foreground line-clamp-1 group-hover:text-primary transition-colors">
             {item.name}
           </h3>
           <Badge 
@@ -52,18 +52,18 @@ export function ItemCard({ item, onBuy }: ItemCardProps) {
         </p>
 
         {/* Price Display */}
-        <div className="space-y-2 p-3 rounded-lg bg-secondary/50 border border-border/50">
+        <div className="space-y-2 p-3 md:p-4 rounded-lg bg-secondary/50 border border-border/50">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-muted-foreground">Price in STX</span>
-            <span className="text-lg font-bold text-foreground">
+            <span className="text-xs md:text-sm text-muted-foreground">Price in STX</span>
+            <span className="text-base md:text-lg font-bold text-foreground">
               {formatMicroUnits(item.price)} STX
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs text-muted-foreground">
+            <span className="text-xs md:text-sm text-muted-foreground">
               ≈ sBTC <BitcoinSymbol className="text-primary" size={12} />
             </span>
-            <span className="text-sm font-medium text-primary">
+            <span className="text-sm md:text-base font-medium text-primary">
               {stxToSbtc(item.price)} sBTC
             </span>
           </div>
@@ -86,9 +86,9 @@ export function ItemCard({ item, onBuy }: ItemCardProps) {
         <Button
           onClick={() => onBuy(item)}
           disabled={!isAvailable}
-          className="w-full btn-bitcoin"
+          className="w-full btn-bitcoin h-12 text-base font-semibold"
         >
-          <ShoppingCart className="w-4 h-4 mr-2" />
+          <ShoppingCart className="w-5 h-5 mr-2" />
           {isAvailable ? 'Buy Now' : 'Unavailable'}
         </Button>
       </CardFooter>
