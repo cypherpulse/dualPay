@@ -121,7 +121,7 @@ export function Dashboard() {
       </div>
 
       {/* Earnings Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {/* STX Earnings */}
         <Card className="card-glow overflow-hidden">
           <div className="h-1 bg-gradient-to-r from-blue-500 to-blue-600" />
